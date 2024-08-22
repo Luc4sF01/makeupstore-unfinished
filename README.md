@@ -1,1 +1,4 @@
 # makeupstore
+MakeupStore é um site dedicado à venda de produtos de maquiagem, projetado para oferecer uma experiência de compra agradável e intuitiva. O site apresenta uma variedade de produtos de alta qualidade, desde bases e batons até sombras e pincéis, com um layout moderno e fácil de navegar. Cada produto em destaque é apresentado com imagens detalhadas e descrições claras, facilitando a escolha e a compra diretamente da página principal.
+
+O design responsivo do MakeupStore garante que os clientes possam acessar e comprar seus produtos de maquiagem favoritos de qualquer dispositivo, seja no computador, tablet ou smartphone. Além disso, o site incorpora funcionalidades como um carrossel de produtos em destaque, um menu dropdown de categorias, e um sistema de busca eficiente, tudo para melhorar a experiência do usuário e promover as vendas de maneira eficaz.
