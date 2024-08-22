@@ -1,0 +1,270 @@
+/* Reset CSS básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #161616;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333; /* Cor do cabeçalho em preto */
+    color: #fff; /* Cor do texto no cabeçalho em branco */
+    height: 100px; /* Define uma altura fixa para o cabeçalho */
+    display: flex;
+    align-items: center; /* Alinha o conteúdo verticalmente no centro */
+    padding: 0 20px; /* Padding lateral */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribui espaço entre a logo e a barra de busca */
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a logo no centro do cabeçalho */
+}
+
+.logo img {
+    height: 200px; /* Ajusta a altura da logo conforme necessário */
+    width: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilos para a barra de navegação */
+.nav-menu {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a navegação no centro do cabeçalho */
+    justify-content: center; /* Centraliza horizontalmente */
+    flex: 2; /* Permite que a navegação ocupe o espaço proporcional entre a logo e a barra de busca */
+}
+
+.nav-menu > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-menu > ul > li {
+    position: relative;
+    padding: 10px 15px;
+}
+
+.nav-menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444; /* Cor de fundo do dropdown em cinza escuro */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.nav-menu ul ul li {
+    width: 200px;
+    padding: 10px;
+}
+
+.nav-menu ul li:hover > ul {
+    display: block;
+}
+
+/* Estilos para os itens de navegação */
+.nav-menu ul li a {
+    color: #fff; /* Cor do texto em branco */
+    text-decoration: none;
+    font-weight: 800; /* Deixa a fonte mais grossa */
+}
+
+.nav-menu ul li a:hover {
+    color: #da8b8b; /* Cor do texto ao hover em rosa */
+}
+
+/* Estilos para a barra de notificação */
+.notification-bar {
+    background-color: #555; /* Cor de fundo em cinza */
+    color: #fff; /* Cor do texto em branco */
+    text-align: center; /* Centralizar o texto */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    position: relative; /* Necessário para z-index */
+    z-index: 1000; /* Para garantir que a barra fique acima do cabeçalho */
+    width: 100%; /* Ocupa toda a largura da tela */
+    animation: colorChange 3s infinite; /* Aplica a animação de troca de cores */
+}
+
+/* Animação de troca de cores */
+@keyframes colorChange {
+    0% {
+        background-color: #555; /* Cor inicial em cinza */
+    }
+    50% {
+        background-color: #da8b8b; /* Cor do hover em rosa */
+    }
+    100% {
+        background-color: #555; /* Cor final em cinza */
+    }
+}
+
+/* Estilos para a barra de pesquisa e o ícone do carrinho */
+.search-cart {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+    justify-content: flex-end; /* Alinha horizontalmente os itens no final */
+}
+
+.search-cart form {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o input e o botão */
+}
+
+.search-cart input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px; /* Espaçamento entre o input e o botão */
+}
+
+.search-cart button {
+    background-color: #444; /* Cor de fundo do botão em cinza escuro */
+    color: #fff; /* Cor do texto em branco */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-cart button:hover {
+    background-color: #da8b8b; /* Cor de fundo do botão ao hover em rosa */
+}
+
+.cart-icon {
+    margin-left: 20px; /* Espaçamento entre a barra de pesquisa e o ícone do carrinho */
+    font-size: 24px; /* Tamanho do ícone */
+    color: #fff; /* Cor do ícone em branco */
+}
+
+.cart-icon:hover {
+    color: #da8b8b; /* Cor do ícone ao hover em rosa */
+}
+
+/* Estilos para a página de produtos */
+.products-page {
+    display: flex;
+    margin-top: 20px;
+}
+
+.filters {
+    width: 250px; /* Largura dos filtros */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-right: 20px;
+}
+
+.filters h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #da8b8b; /* Linha abaixo do título */
+    padding-bottom: 10px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filter-group input {
+    margin-right: 8px;
+}
+
+/* Estilos para a lista de produtos */
+.product-list {
+    flex: 1; /* Faz com que a lista de produtos ocupe o restante do espaço disponível */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os produtos quebrem linha e fiquem em várias linhas */
+    gap: 20px; /* Espaçamento entre os produtos */
+}
+
+/* Estilos para cada item de produto */
+.product-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: calc(33.333% - 20px); /* Ajusta a largura dos itens para 3 itens por linha, considerando o espaço entre eles */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.product-item img {
+    width: 100%; /* Ajusta a imagem para preencher a largura do item */
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #da8b8b; /* Cor do preço em rosa */
+}
+
+.product-item .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #da8b8b; /* Cor de fundo do botão em rosa */
+    color: #fff; /* Cor do texto em branco */
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.product-item .btn:hover {
+    background-color: #c76d6a; /* Cor de fundo do botão ao hover em rosa mais escuro */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .product-item {
+        width: calc(50% - 20px); /* Ajusta a largura dos itens para 2 itens por linha em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%; /* Ajusta a largura dos itens para 1 item por linha em telas muito pequenas */
+    }
+}

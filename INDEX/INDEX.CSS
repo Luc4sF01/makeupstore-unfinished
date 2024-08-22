@@ -1,0 +1,319 @@
+/* RESET DE CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilos para a barra de notificação */
+.notification-bar {
+    background-color: #555; /* Cor de fundo em cinza */
+    color: #fff; /* Cor do texto em branco */
+    text-align: center; /* Centralizar o texto */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    position: relative; /* Necessário para z-index */
+    z-index: 1000; /* Para garantir que a barra fique acima do cabeçalho */
+    width: 100%; /* Ocupa toda a largura da tela */
+    animation: colorChange 3s infinite; /* Aplica a animação de troca de cores */
+}
+/* Animação de troca de cores */
+@keyframes colorChange {
+    0% {
+        background-color: #555; /* Cor inicial em cinza */
+    }
+    50% {
+        background-color: #da8b8b; /* Cor do hover em rosa */
+    }
+    100% {
+        background-color: #555; /* Cor final em cinza */
+    }
+}
+
+/* HEADER */
+header {
+    background-color: #333; /* Cor do cabeçalho em preto */
+    color: #fff; /* Cor do texto no cabeçalho em branco */
+    height: 100px; /* Define uma altura fixa para o cabeçalho */
+    display: flex;
+    align-items: center; /* Alinha o conteúdo verticalmente no centro */
+    padding: 0 20px; /* Padding lateral */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribui espaço entre a logo e a barra de busca */
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a logo no centro do cabeçalho */
+}
+
+.logo img {
+    height: 200px; /* Ajusta a altura da logo conforme necessário */
+    width: auto; /* Mantém a proporção da imagem */
+}
+.nav-menu {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o menu no cabeçalho */
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0; /* Remove o padding padrão da lista */
+}
+
+.nav-menu ul li {
+    position: relative; /* Necessário para o dropdown */
+    padding: 0 15px; /* Ajuste o padding dos itens do menu */
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    display: block; /* Faz o link ocupar toda a área do item da lista */
+    padding: 10px; /* Adiciona padding ao link */
+}
+
+/* Dropdown Menu */
+.nav-menu ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #343a40; /* Cinza escuro */
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+    z-index: 1000;
+    width: 200px; /* Define a largura do menu dropdown */
+}
+
+.nav-menu ul li:hover > ul {
+    display: block;
+}
+
+.nav-menu ul li ul li {
+    padding: 10px 20px;
+}
+
+.nav-menu ul li ul li a {
+    color: #fff;
+    padding: 5px 0; /* Adiciona padding aos links do dropdown */
+    display: block; /* Faz o link ocupar toda a área do item da lista */
+    text-decoration: none;
+}
+
+.nav-menu ul li ul li a:hover {
+    background-color: #495057; /* Cor de fundo ao passar o mouse */
+}
+
+/* Ajuste o padding do item de lista principal */
+.nav-menu ul li {
+    padding: 0; /* Remove o padding do item principal */
+}
+
+/* Ajusta o tamanho do texto no menu dropdown */
+.nav-menu ul li ul li a {
+    font-size: 0.9rem; /* Tamanho do texto menor no dropdown */
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+}
+
+.search-cart form {
+    display: flex;
+    align-items: center;
+}
+
+.search-cart input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search-cart button {
+    background-color: #e83e8c; /* Cor de destaque */
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-icon {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+/* MAIN SECTION */
+.hero {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.background-slideshow {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #e83e8c; /* Cor de destaque */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* FEATURED PRODUCTS */
+.featured-products {
+    padding: 40px 20px;
+    position: relative; /* Garante que o conteúdo fique sobre o slideshow se necessário */
+}
+
+.featured-products h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.product {
+    flex: 1 0 20%;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    z-index: 1; /* Garante que a imagem fique atrás dos elementos sobrepostos */
+}
+
+.product-info {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    z-index: 2; /* Garante que o conteúdo da informação do produto fique sobre a imagem */
+    transition: opacity 0.3s ease; /* Suaviza a transição */
+    opacity: 0; /* Inicialmente invisível */
+}
+
+.product:hover .product-info {
+    opacity: 1; /* Torna visível ao passar o mouse */
+}
+
+.product-info h3 {
+    margin-bottom: 5px;
+}
+
+.product-info p {
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #e83e8c; /* Cor de destaque */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    position: relative;
+    z-index: 3; /* Garante que o botão fique sobre a imagem e outros elementos */
+}
+
+.arrow {
+    background-color: #e83e8c; /* Cor de destaque */
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    z-index: 3; /* Garante que as setas do carrossel fiquem sobre a imagem */
+}
+
+.arrow.prev {
+    left: 10px;
+}
+
+.arrow.next {
+    right: 10px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #343a40; /* Cinza escuro */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
