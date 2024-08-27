@@ -1,0 +1,247 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilos para a barra de notificação */
+.notification-bar {
+    background-color: #555; /* Cor de fundo em cinza */
+    color: #fff; /* Cor do texto em branco */
+    text-align: center; /* Centralizar o texto */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    position: relative; /* Necessário para z-index */
+    z-index: 1000; /* Para garantir que a barra fique acima do cabeçalho */
+    width: 100%; /* Ocupa toda a largura da tela */
+    animation: colorChange 3s infinite; /* Aplica a animação de troca de cores */
+}
+
+/* Animação de troca de cores */
+@keyframes colorChange {
+    0% {
+        background-color: #555; /* Cor inicial em cinza */
+    }
+    50% {
+        background-color: #da8b8b; /* Cor do hover em rosa */
+    }
+    100% {
+        background-color: #555; /* Cor final em cinza */
+    }
+}
+
+/* HEADER */
+header {
+    background-color: #333; /* Cor do cabeçalho em preto */
+    color: #fff; /* Cor do texto no cabeçalho em branco */
+    height: 100px; /* Define uma altura fixa para o cabeçalho */
+    display: flex;
+    align-items: center; /* Alinha o conteúdo verticalmente no centro */
+    padding: 0 20px; /* Padding lateral */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribui espaço entre a logo e a barra de busca */
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a logo no centro do cabeçalho */
+}
+
+.logo img {
+    height: 200px; /* Ajusta a altura da logo conforme necessário */
+    width: auto; /* Mantém a proporção da imagem */
+}
+
+.nav-menu {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o menu no cabeçalho */
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0; /* Remove o padding padrão da lista */
+}
+
+.nav-menu ul li {
+    position: relative; /* Necessário para o dropdown */
+    padding: 0 15px; /* Ajuste o padding dos itens do menu */
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    display: block; /* Faz o link ocupar toda a área do item da lista */
+    padding: 10px; /* Adiciona padding ao link */
+}
+
+/* Dropdown Menu */
+.nav-menu ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #343a40; /* Cinza escuro */
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+    z-index: 1000;
+    width: 200px; /* Define a largura do menu dropdown */
+}
+
+.nav-menu ul li:hover > ul {
+    display: block;
+}
+
+.nav-menu ul li ul li {
+    padding: 10px 20px;
+}
+
+.nav-menu ul li ul li a {
+    color: #fff;
+    padding: 5px 0; /* Adiciona padding aos links do dropdown */
+    display: block; /* Faz o link ocupar toda a área do item da lista */
+    text-decoration: none;
+}
+
+.nav-menu ul li ul li a:hover {
+    background-color: #495057; /* Cor de fundo ao passar o mouse */
+}
+
+/* Ajuste o padding do item de lista principal */
+.nav-menu ul li {
+    padding: 0; /* Remove o padding do item principal */
+}
+
+/* Ajusta o tamanho do texto no menu dropdown */
+.nav-menu ul li ul li a {
+    font-size: 0.9rem; /* Tamanho do texto menor no dropdown */
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+}
+
+.search-cart form {
+    display: flex;
+    align-items: center;
+}
+
+.search-cart input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search-cart button {
+    background-color: #e83e8c; /* Cor de destaque */
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-icon {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 15px;
+}
+/* Rodapé Personalizado */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que as seções do footer se ajustem em telas menores */
+    gap: 30px; /* Espaçamento entre as seções */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Largura mínima das seções */
+}
+
+.footer-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #e83e8c;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.footer-section a {
+    color: #e83e8c;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+#nossa-loja-fisica {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#nossa-loja-fisica h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#nossa-loja-fisica p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.map-container,
+.earth-container {
+    margin-bottom: 40px;
+}
+
+.map-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.earth-container iframe {
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
