@@ -22,6 +22,7 @@ body {
     width: 100%; /* Ocupa toda a largura da tela */
     animation: colorChange 3s infinite; /* Aplica a animação de troca de cores */
 }
+
 /* Animação de troca de cores */
 @keyframes colorChange {
     0% {
@@ -66,6 +67,7 @@ header {
     height: 200px; /* Ajusta a altura da logo conforme necessário */
     width: auto; /* Mantém a proporção da imagem */
 }
+
 .nav-menu {
     flex: 1;
     display: flex;
@@ -164,150 +166,42 @@ header {
     margin-left: 15px;
 }
 
-/* MAIN SECTION */
-.hero {
-    position: relative;
-    text-align: center;
-    overflow: hidden;
+/* Centralização da Seção de Contatos */
+.contact-section {
+    background-color: #f4f4f4;
+    padding: 100px 0; /* Espaçamento superior e inferior maior para centralizar */
+    min-height: calc(100vh - 100px); /* Altura mínima da seção (tamanho da tela menos a altura do header) */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
 }
 
-.background-slideshow {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-}
-
-.btn {
-    background-color: #e83e8c; /* Cor de destaque */
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-}
-
-/* FEATURED PRODUCTS */
-.featured-products {
-    padding: 40px 20px;
-    position: relative; /* Garante que o conteúdo fique sobre o slideshow se necessário */
-}
-
-.featured-products h2 {
-    text-align: center;
-    margin-bottom: 20px;
+.contact-section h2 {
     font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* Centraliza o título */
 }
 
-.carousel {
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-item {
     display: flex;
     align-items: center;
-    position: relative;
+    font-size: 1.2rem;
+    color: #333;
 }
 
-.carousel-inner {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-}
-
-.product {
-    flex: 1 0 20%;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-}
-
-.product img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    z-index: 1; /* Garante que a imagem fique atrás dos elementos sobrepostos */
-}
-
-.product-info {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    width: 100%;
-    text-align: center;
-    z-index: 2; /* Garante que o conteúdo da informação do produto fique sobre a imagem */
-    transition: opacity 0.3s ease; /* Suaviza a transição */
-    opacity: 0; /* Inicialmente invisível */
-}
-
-.product:hover .product-info {
-    opacity: 1; /* Torna visível ao passar o mouse */
-}
-
-.product-info h3 {
-    margin-bottom: 5px;
-}
-
-.product-info p {
-    margin-bottom: 10px;
-}
-
-.btn {
-    background-color: #e83e8c; /* Cor de destaque */
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-    position: relative;
-    z-index: 3; /* Garante que o botão fique sobre a imagem e outros elementos */
-}
-
-.arrow {
-    background-color: #e83e8c; /* Cor de destaque */
-    border: none;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    z-index: 3; /* Garante que as setas do carrossel fiquem sobre a imagem */
-}
-
-.arrow.prev {
-    left: 10px;
-}
-
-.arrow.next {
-    right: 10px;
+.contact-item i {
+    font-size: 1.5rem;
+    color: #e83e8c;
+    margin-right: 15px;
 }
 
 /* Rodapé Personalizado */

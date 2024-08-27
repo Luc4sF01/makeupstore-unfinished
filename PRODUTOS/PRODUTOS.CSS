@@ -268,3 +268,48 @@ header {
         width: 100%; /* Ajusta a largura dos itens para 1 item por linha em telas muito pequenas */
     }
 }
+/* Rodapé Personalizado */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que as seções do footer se ajustem em telas menores */
+    gap: 30px; /* Espaçamento entre as seções */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Largura mínima das seções */
+}
+
+.footer-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #e83e8c;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.footer-section a {
+    color: #e83e8c;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
