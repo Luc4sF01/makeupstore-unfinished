@@ -94,6 +94,11 @@ header {
     padding: 10px; /* Adiciona padding ao link */
 }
 
+.nav-menu a:hover {
+        text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        color: #da8b8b; /* Define a cor do texto no hover */
+}
+
 /* Dropdown Menu */
 .nav-menu ul li ul {
     display: none;
@@ -132,38 +137,47 @@ header {
 
 /* Ajusta o tamanho do texto no menu dropdown */
 .nav-menu ul li ul li a {
-    font-size: 0.9rem; /* Tamanho do texto menor no dropdown */
+    font-size: 0.8rem; /* Tamanho do texto menor no dropdown */
 }
 
 .search-cart {
     display: flex;
-    align-items: center;
+    align-items: center; /* Alinha verticalmente os itens */
+    justify-content: flex-end; /* Alinha horizontalmente os itens no final */
 }
 
 .search-cart form {
     display: flex;
-    align-items: center;
+    align-items: center; /* Alinha verticalmente o input e o botão */
 }
 
-.search-cart input[type="text"] {
-    border: 1px solid #ccc;
+.search-cart input {
     padding: 5px;
-    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px; /* Espaçamento entre o input e o botão */
 }
 
 .search-cart button {
-    background-color: #e83e8c; /* Cor de destaque */
+    background-color: #444; /* Cor de fundo do botão em cinza escuro */
+    color: #fff; /* Cor do texto em branco */
     border: none;
-    color: #fff;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+}
+.search-cart button:hover {
+    background-color: #da8b8b; /* Cor de fundo do botão ao hover em rosa */
 }
 
 .cart-icon {
-    color: #fff;
-    font-size: 24px;
-    margin-left: 15px;
+    margin-left: 20px; /* Espaçamento entre a barra de pesquisa e o ícone do carrinho */
+    font-size: 24px; /* Tamanho do ícone */
+    color: #fff; /* Cor do ícone em branco */
+}
+
+.cart-icon:hover {
+    color: #da8b8b; /* Cor do ícone ao hover em rosa */
 }
 
 /* Centralização da Seção de Contatos */

@@ -81,6 +81,11 @@ header {
 .nav-menu ul li:hover > ul {
     display: block;
 }
+.nav-menu a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: #da8b8b; /* Define a cor do texto no hover */
+}
+
 
 /* Estilos para os itens de navegação */
 .nav-menu ul li a {

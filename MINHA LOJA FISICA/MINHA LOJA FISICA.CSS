@@ -93,6 +93,11 @@ header {
     display: block; /* Faz o link ocupar toda a área do item da lista */
     padding: 10px; /* Adiciona padding ao link */
 }
+.nav-menu a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: #da8b8b; /* Define a cor do texto no hover */
+}
+
 
 /* Dropdown Menu */
 .nav-menu ul li ul {
