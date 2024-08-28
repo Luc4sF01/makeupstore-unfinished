@@ -1,0 +1,234 @@
+/* RESET DE CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.6s ease;
+    background-color: #333; /* Cor de fundo inicial para login */
+    background-size: cover; /* Ajusta o fundo para cobrir a tela */
+}
+
+/* Fundo da tela de login */
+body.login-bg {
+    background-image: url('https://picsum.photos/1920/1080?random=6');
+}
+
+/* Fundo da tela de cadastro */
+body.signup-bg {
+    background-image: url('https://picsum.photos/1920/1080?random=7');
+}
+
+/* Container da tela de login/cadastro */
+.container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Caixa de Login/Cadastro */
+.form-container {
+    background-color: rgba(51, 51, 51, 0.7); /* Fundo semi-transparente */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    height: 500px; /* Altura fixa para a caixa */
+}
+
+/* Botões de Alternância */
+.form-toggle {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(68, 68, 68, 0.7);
+}
+
+.toggle-button {
+    background-color: rgba(85, 85, 85, 0.7);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    width: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+.toggle-button.active {
+    background-color: #da8b8b;
+}
+
+.toggle-button:hover {
+    background-color: rgba(102, 102, 102, 0.7);
+}
+
+/* Contêiner das telas de login e cadastro */
+.form-wrapper {
+    display: flex;
+    transition: transform 0.6s ease;
+    height: 100%; /* Garantir que ocupa toda a altura da caixa */
+}
+
+.form-box {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+/* Estilo da tela de login */
+.login-form {
+    background-color: rgba(68, 68, 68, 0.5); /* Fundo mais transparente */
+    color: #fff;
+}
+
+/* Estilo da tela de cadastro */
+.signup-form {
+    background-color: rgba(255, 255, 255, 0.5); /* Fundo mais transparente */
+    color: #333; /* Cor do texto na tela de cadastro */
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+/* Estilo do título */
+.form-box h2 {
+    margin-bottom: 20px;
+    color: #da8b8b;
+    text-align: center;
+}
+
+.form-box h2 i {
+    margin-right: 10px;
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+/* Cores dos rótulos */
+.login-form label {
+    color: #fff; /* Cor do texto dos rótulos na tela de login */
+}
+
+.signup-form label {
+    color: #333; /* Cor do texto dos rótulos na tela de cadastro */
+}
+
+form input {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    background-color: rgba(51, 51, 51, 0.3); /* Fundo mais transparente dos inputs */
+    color: #fff; /* Cor do texto do input na tela de login */
+    font-size: 1rem;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.login-form input {
+    background-color: rgba(51, 51, 51, 0.3);
+    color: #fff;
+}
+
+.signup-form input {
+    background-color: rgba(255, 255, 255, 0.3); /* Fundo mais transparente dos inputs */
+    color: #333; /* Cor do texto do input na tela de cadastro */
+}
+
+form input:focus {
+    background-color: #444;
+    border-color: #da8b8b;
+}
+
+form button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #da8b8b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+form button i {
+    margin-right: 10px;
+}
+
+form button:hover {
+    background-color: #c87a7a;
+}
+
+/* Estilo da mensagem "Esqueceu a senha?" */
+.forgot-password {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forgot-password a {
+    color: #da8b8b;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.forgot-password i {
+    margin-right: 8px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo da mensagem "Já possui conta?" */
+.already-have-account {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.already-have-account a {
+    color: #da8b8b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.already-have-account a:hover {
+    text-decoration: underline;
+}
+
+/* Animação de transição */
+.show-signup .form-wrapper {
+    transform: translateX(-100%);
+}
+
+.show-signup .signup-form {
+    opacity: 1;
+}
+
+.show-signup body {
+    background-color: #fff; /* Cor de fundo para a tela de cadastro */
+}
